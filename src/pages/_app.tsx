@@ -18,15 +18,14 @@ export default function App({ Component, pageProps }: ComponentWithPageLayout) {
   return (
     <div className="absolute inset-0 overflow-y-auto overflow-x-hidden bg-gray-100">
       <QueryClientProvider client={queryClient}>
+      <ToastContainer/>
         {Component.PageLayout ? (
           /* @ts-ignore */
           <Component.PageLayout>
-            <ToastContainer />
             <Component {...pageProps} />
           </Component.PageLayout>
         ) : (
           <>
-          <ToastContainer/>
           <Component {...pageProps} />
           </>
         )}
