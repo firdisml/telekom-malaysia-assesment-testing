@@ -5,7 +5,7 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon, InformationCircleIcon } from '@heroicons/react/outline'
 import { SearchIcon } from '@heroicons/react/solid'
 import { useRouter } from "next/router";
-import { ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Link from "next/link";
 
@@ -30,18 +30,51 @@ function PrimaryLayout(props) {
 
     const router = useRouter()
 
-    {/* @ts-ignore */ }
+
+
+    /* @ts-ignore */
     const handle_logout = async (e) => {
 
-        await axios.post('/api/logout', {
-            /* @ts-ignore*/
-            "login_id": props?.children?.props?.user?.id,
-        },
-            {
-                headers: { "Content-Type": "application/json" },
-            })
+        const id = toast.loading('Logging out')
 
-        await router.push('/')
+        try {
+            await axios.post('/api/logout', {
+                /* @ts-ignore*/
+                "login_id": props?.children?.props?.user?.id,
+            },
+                {
+                    headers: { "Content-Type": "application/json" },
+                })
+
+            toast.update(id, {
+                render: "Success", type: "success", isLoading: false, position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+
+            await router.push('/')
+
+        } catch (error) {
+
+            toast.update(id, {
+                render: "Invalid Credential", type: "error", isLoading: false,
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+
+        }
+
     }
 
     return (<>
@@ -124,10 +157,10 @@ function PrimaryLayout(props) {
                                                     href={item.href}
                                                     className={classNames(
                                                         router.route.includes(item.href)
-                                                          ? "text-white bg-opacity-10"
-                                                          : "text-gray-200 bg-opacity-0 hover:bg-opacity-10",
+                                                            ? "text-white bg-opacity-10"
+                                                            : "text-gray-200 bg-opacity-0 hover:bg-opacity-10",
                                                         "rounded-md bg-white px-3 py-2 text-sm font-medium "
-                                                      )}
+                                                    )}
                                                     aria-current={item.current ? 'page' : undefined}
                                                 >
                                                     {item.name}
