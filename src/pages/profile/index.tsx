@@ -4,14 +4,13 @@ import { GetServerSidePropsContext, GetServerSideProps } from "next";
 import axios from "axios";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useRouter } from 'next/router';
+
 import { Tooltip } from "react-tooltip";
 import 'react-tooltip/dist/react-tooltip.css'
 
 {/* @ts-ignore */ }
 function Index(props) {
 
-    const router = useRouter()
     const [name, set_name] = useState(props.user.name)
     const [id_number, set_id_number] = useState(props.user.idNo)
     const [email, set_email] = useState(props.user.email)
@@ -68,9 +67,6 @@ function Index(props) {
             progress: undefined,
             theme: "light",
         });
-
-        await router.push('/profile')
-
 
     }
 
