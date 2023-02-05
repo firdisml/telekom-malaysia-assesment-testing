@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/router'
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
@@ -14,9 +14,8 @@ export default function Home() {
 
     e.preventDefault();
 
-    const id = toast.loading("Loging in")
-
     try {
+      
       await axios.post('/api/login', {
         /* @ts-ignore*/
         "login_id": login_id?.current?.value,
@@ -26,8 +25,6 @@ export default function Home() {
         {
           headers: { "Content-Type": "application/json" },
         })
-
-      toast.update(id, { render: "Success", type: "success", isLoading: false });
 
       await router.push('/dashboard')
 
@@ -49,7 +46,6 @@ export default function Home() {
 
   return (
     <>
-      <ToastContainer />
       <div className="min-h-screen flex">
         <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
