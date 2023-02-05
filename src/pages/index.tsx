@@ -1,11 +1,8 @@
-import { Inter } from '@next/font/google'
 import { useRef } from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const router = useRouter()
