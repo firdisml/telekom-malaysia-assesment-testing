@@ -45,7 +45,6 @@ function PrimaryLayout(props) {
     }
 
     return (<>
-        <ToastContainer />
         <div className="min-h-screen">
             <Popover as="header" className="pb-24 bg-indigo-600">
                 {({ open }) => (
