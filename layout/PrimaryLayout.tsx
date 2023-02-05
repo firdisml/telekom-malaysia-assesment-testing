@@ -7,6 +7,7 @@ import { BellIcon, MenuIcon, XIcon, InformationCircleIcon } from '@heroicons/rea
 import { SearchIcon } from '@heroicons/react/solid'
 import { useRouter } from "next/router";
 import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import Link from "next/link";
 
 const user = {

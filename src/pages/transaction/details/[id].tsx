@@ -5,7 +5,6 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { useQuery } from '@tanstack/react-query'
 import { DateTime } from 'luxon'
-import { ToastContainer } from 'react-toastify';
 
 const fetch_unique_employer_transaction = async (param: any) => {
   const fetch_transaction = await axios.get(
@@ -36,7 +35,6 @@ function Index() {
 
   return (
     <>
-    <ToastContainer />
       <div className="overflow-hidden bg-white shadow sm:rounded-lg">
         <div className="px-4 py-5 sm:px-6">
           <h3 className="text-lg font-medium leading-6 text-gray-900">Transaction Details</h3>

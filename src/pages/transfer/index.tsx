@@ -2,8 +2,7 @@ import React, { useRef } from 'react'
 import PrimaryLayout from "layout/PrimaryLayout";
 import { GetServerSidePropsContext, GetServerSideProps } from "next";
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 
 
@@ -43,7 +42,6 @@ function Index(props) {
     }
     return (
         <>
-            <ToastContainer />
             <div className="mt-5 md:mt-0 md:col-span-2">
                 <form onSubmit={handle_transfer} method="POST">
                     <div className="shadow sm:rounded-md sm:overflow-hidden">

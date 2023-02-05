@@ -77,7 +77,6 @@ function Index(props) {
 
     return (
         <>
-          
             <div className="mt-5 md:mt-0 md:col-span-2">
                 <form onSubmit={handle_update}>
                     <div className="shadow sm:rounded-md sm:overflow-hidden">
