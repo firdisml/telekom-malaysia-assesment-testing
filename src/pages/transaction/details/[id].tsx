@@ -106,7 +106,7 @@ export const getServerSideProps: GetServerSideProps = async (
 
   res.setHeader(
     "Cache-Control",
-    "public, s-maxage=10, stale-while-revalidate=59"
+    "public, s-maxage=10, stale-while-revalidate=120"
   );
 
   const id = req.cookies['auth']
