@@ -188,9 +188,16 @@ export const getServerSideProps: GetServerSideProps = async (
         req,
         res,
     } = ctx;
+    
 
-    const id = req.cookies['auth']
+    res.setHeader(
+        "Cache-Control",
+        "public, s-maxage=10, stale-while-revalidate=59"
+      );
 
+      const id = req.cookies['auth']
+
+      
     try {
         const fetch_user = await axios.get(
             `https://web-assessment.apps.ocp.tmrnd.com.my/api/user/${id}`,
