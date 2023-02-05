@@ -51,7 +51,6 @@ function Index(props) {
         });
 
     return (<>
-
         <div className="p-5 bg-gray-200"> 
             <div className="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2">
                     <div className="bg-white overflow-hidden shadow rounded-lg">

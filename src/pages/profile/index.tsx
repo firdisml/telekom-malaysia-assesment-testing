@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PrimaryLayout from "layout/PrimaryLayout";
 import { GetServerSidePropsContext, GetServerSideProps } from "next";
 import axios from "axios";
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/router';
 import { Tooltip } from "react-tooltip";
@@ -77,7 +77,7 @@ function Index(props) {
 
     return (
         <>
-            <ToastContainer />
+          
             <div className="mt-5 md:mt-0 md:col-span-2">
                 <form onSubmit={handle_update}>
                     <div className="shadow sm:rounded-md sm:overflow-hidden">
