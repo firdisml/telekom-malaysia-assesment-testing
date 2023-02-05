@@ -29,7 +29,7 @@ export default function Home() {
 
       toast.update(id, {
         render: "Success", type: "success", isLoading: false, position: "top-right",
-        autoClose: 5000,
+        autoClose: 10000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
