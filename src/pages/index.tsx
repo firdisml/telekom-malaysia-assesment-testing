@@ -14,6 +14,8 @@ export default function Home() {
 
     e.preventDefault();
 
+    const id = toast.loading("Loging in")
+
     try {
       await axios.post('/api/login', {
         /* @ts-ignore*/
@@ -25,7 +27,10 @@ export default function Home() {
           headers: { "Content-Type": "application/json" },
         })
 
+      toast.update(id, { render: "Success", type: "success", isLoading: false });
+
       await router.push('/dashboard')
+
     } catch (error) {
 
       toast.error('Invalid Login', {
