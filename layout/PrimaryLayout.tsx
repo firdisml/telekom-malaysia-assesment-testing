@@ -15,10 +15,7 @@ const navigation = [
     { name: 'Transaction', href: '/transaction', current: false },
     { name: 'Transfer', href: '/transfer', current: false },
     { name: 'Profile', href: '/profile', current: false },
-]
-const userNavigation = [
-    { name: 'Logout', href: '#' },
-]
+] 
 
 {/* @ts-ignore */ }
 function classNames(...classes) {
@@ -87,14 +84,9 @@ function PrimaryLayout(props) {
                                 {/* Logo */}
                                 <div className="absolute left-0 flex-shrink-0 lg:static">
                                     <a href="#">
-                                        <span className="sr-only">Workflow</span>
-                                        <picture>
-                                            <img
-                                                className="h-8 w-auto"
-                                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-300.svg"
-                                                alt="Workflow"
-                                            />
-                                        </picture>
+                                        <svg fill="none" className="h-9 w-9 text-white mx-auto" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"></path>
+                                        </svg>
                                     </a>
                                 </div>
 
@@ -203,13 +195,9 @@ function PrimaryLayout(props) {
                                             <div className="pt-3 pb-2">
                                                 <div className="flex items-center justify-between px-4">
                                                     <div>
-                                                        <picture>
-                                                            <img
-                                                                className="h-8 w-auto"
-                                                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                                                                alt="Workflow"
-                                                            />
-                                                        </picture>
+                                                        <svg fill="none" className="h-9 w-9 mx-auto" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"></path>
+                                                        </svg>
                                                     </div>
                                                     <div className="-mr-2">
                                                         <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -251,15 +239,12 @@ function PrimaryLayout(props) {
                                             </div>
                                             <div className="pt-2 pb-2">
                                                 <div className="px-2 space-y-1">
-                                                    {userNavigation.map((item) => (
-                                                        <a
-                                                            key={item.name}
-                                                            href={item.href}
+                                                <a
+                                                            onClick={handle_logout}
                                                             className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800"
                                                         >
-                                                            {item.name}
+                                                            Logout
                                                         </a>
-                                                    ))}
                                                 </div>
                                             </div>
                                         </div>
