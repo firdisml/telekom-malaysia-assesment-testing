@@ -1,38 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Savvy Banking App
 
-First, run the development server:
+Savvy Banking App is a web-based application designed to offer convenient and efficient banking services to its users. The aim of the project is to provide a seamless experience for managing personal finances, including features such as account management, bill payments, money transfers, and financial tracking. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Demo
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+[Demo](https://telekom-malaysia-assesment-testing.vercel.app/dashboard)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- NextJS 13
+- Typescript
+- Axios
+- Tailwind CSS
+- Luxon Moment
+- React Toastify
+- Tanstack React Query
+- Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Security
 
-## Deploy on Vercel
+The Savvy Banking App utilizes cookies as a key component of its web security system. Cookies are small text files stored on a user's device by the web browser, and they help the website remember important information about the user's session. In the case of the Savvy Banking App, cookies are used to securely store information such as the user's login credentials. This information is encrypted to ensure that it remains confidential and cannot be accessed by unauthorized parties.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The Savvy Banking App utilizes server-side rendering (SSR) and APIs to manage user sessions and assign cookies. SSR involves rendering web pages on the server before sending them to the client's browser, which allows for the creation of a secure and efficient user session management system. The app uses APIs to communicate with the server and assign cookies to users when they log in. 
