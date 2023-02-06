@@ -6,11 +6,15 @@ Savvy Banking App is a web-based application designed to offer convenient and ef
 
 
 
-## Demo
+## Installation
 
-[Demo](https://telekom-malaysia-assesment-testing.vercel.app/dashboard)
+Install this project with yarn
 
+```bash
+  yarn install telekom-malaysia-assesment-testing
 
+```
+    
 ## Tech Stack
 
 - NextJS 13
