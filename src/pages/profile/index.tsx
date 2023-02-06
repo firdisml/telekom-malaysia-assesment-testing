@@ -85,7 +85,7 @@ function Index(props) {
               <div className="grid grid-cols-6 gap-6">
                 <div className="col-span-6">
                   <label
-                    htmlFor="first-name"
+                    htmlFor="name"
                     className="mb-3 flex block text-sm font-medium text-gray-700"
                   >
                     Name
@@ -93,14 +93,14 @@ function Index(props) {
                   <input
                     required
                     type="text"
-                    name="first-name"
-                    id="first-name"
+                    name="name"
+                    id="name"
                     value={name ? name : null}
                     /* @ts-ignore */
                     onChange={(e) => {
                       set_name(e.currentTarget.value);
                     }}
-                    autoComplete="given-name"
+                    autoComplete="name"
                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
@@ -109,28 +109,28 @@ function Index(props) {
               <div className="grid grid-cols-6 gap-6">
                 <div className="col-span-3">
                   <label
-                    htmlFor="first-name"
+                    htmlFor="email"
                     className="mb-3 flex block text-sm font-medium text-gray-700"
                   >
                     Email
                   </label>
                   <input
                     required
-                    type="text"
-                    name="first-name"
+                    type="email"
+                    name="email"
                     value={email ? email : null}
                     /* @ts-ignore */
                     onChange={(e) => {
                       set_email(e.currentTarget.value);
                     }}
-                    id="first-name"
-                    autoComplete="given-name"
+                    id="email"
+                    autoComplete="email"
                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
                 <div className="col-span-3">
                   <label
-                    htmlFor="first-name"
+                    htmlFor="idnumber"
                     className="mb-3 flex block text-sm font-medium text-gray-700"
                   >
                     ID Number
@@ -138,14 +138,14 @@ function Index(props) {
                   <input
                     required
                     type="text"
-                    name="first-name"
+                    name="idnumber"
                     value={id_number ? id_number : null}
                     /* @ts-ignore */
                     onChange={(e) => {
                       set_id_number(e.currentTarget.value);
                     }}
-                    id="first-name"
-                    autoComplete="given-name"
+                    id="idnumber"
+                    autoComplete="idnumber"
                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
@@ -154,7 +154,7 @@ function Index(props) {
               <div className="grid grid-cols-6 gap-6">
                 <div className="col-span-3">
                   <label
-                    htmlFor="first-name"
+                    htmlFor="address_1"
                     className="mb-3 flex block text-sm font-medium text-gray-700"
                   >
                     Adress 1
@@ -162,20 +162,20 @@ function Index(props) {
                   <input
                     required
                     type="text"
-                    name="first-name"
+                    name="address_1"
                     value={address_1 ? address_1 : null}
                     /* @ts-ignore */
                     onChange={(e) => {
                       set_address_1(e.currentTarget.value);
                     }}
-                    id="first-name"
-                    autoComplete="given-name"
+                    id="address_1"
+                    autoComplete="address_1"
                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
                 <div className="col-span-3">
                   <label
-                    htmlFor="first-name"
+                    htmlFor="address_2"
                     className="mb-3 flex block text-sm font-medium text-gray-700"
                   >
                     Address 2
@@ -183,14 +183,14 @@ function Index(props) {
                   <input
                     required
                     type="text"
-                    name="first-name"
-                    id="first-name"
+                    name="address_2"
+                    id="address_2"
                     value={address_2 ? address_2 : null}
                     /* @ts-ignore */
                     onChange={(e) => {
                       set_address_2(e.currentTarget.value);
                     }}
-                    autoComplete="given-name"
+                    autoComplete="address_2"
                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
@@ -199,7 +199,7 @@ function Index(props) {
               <div className="grid grid-cols-6 gap-6">
                 <div className="col-span-3">
                   <label
-                    htmlFor="first-name"
+                    htmlFor="city"
                     className="mb-3 flex block text-sm font-medium text-gray-700"
                   >
                     City
@@ -207,20 +207,20 @@ function Index(props) {
                   <input
                     required
                     type="text"
-                    name="first-name"
+                    name="city"
                     value={city ? city : null}
                     /* @ts-ignore */
                     onChange={(e) => {
                       set_city(e.currentTarget.value);
                     }}
-                    id="first-name"
-                    autoComplete="given-name"
+                    id="city"
+                    autoComplete="city"
                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
                 <div className="col-span-3">
                   <label
-                    htmlFor="first-name"
+                    htmlFor="postcode"
                     className="mb-3 flex block text-sm font-medium text-gray-700"
                   >
                     Postcode
@@ -228,14 +228,14 @@ function Index(props) {
                   <input
                     required
                     type="text"
-                    name="first-name"
+                    name="postcode"
                     value={postcode ? postcode : null}
                     /* @ts-ignore */
                     onChange={(e) => {
                       set_postcode(e.currentTarget.value);
                     }}
-                    id="first-name"
-                    autoComplete="given-name"
+                    id="postcode"
+                    autoComplete="postcode"
                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
@@ -244,7 +244,7 @@ function Index(props) {
               <div className="grid grid-cols-6 gap-6">
                 <div className="col-span-3">
                   <label
-                    htmlFor="first-name"
+                    htmlFor="state"
                     className="mb-3 flex block text-sm font-medium text-gray-700"
                   >
                     State
@@ -252,20 +252,20 @@ function Index(props) {
                   <input
                     required
                     type="text"
-                    name="first-name"
-                    id="first-name"
+                    name="state"
+                    id="state"
                     value={state ? state : null}
                     /* @ts-ignore */
                     onChange={(e) => {
                       set_state(e.currentTarget.value);
                     }}
-                    autoComplete="given-name"
+                    autoComplete="state"
                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
                 <div className="col-span-3">
                   <label
-                    htmlFor="first-name"
+                    htmlFor="country"
                     className="mb-3 flex block text-sm font-medium text-gray-700"
                   >
                     Country
@@ -273,14 +273,14 @@ function Index(props) {
                   <input
                     required
                     type="text"
-                    name="first-name"
-                    id="first-name"
+                    name="country"
+                    id="country"
                     value={country ? country : null}
                     /* @ts-ignore */
                     onChange={(e) => {
                       set_country(e.currentTarget.value);
                     }}
-                    autoComplete="given-name"
+                    autoComplete="country"
                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
@@ -305,42 +305,42 @@ function Index(props) {
               <div className="grid grid-cols-6 gap-6">
                 <div className="col-span-3">
                   <label
-                    htmlFor="first-name"
+                    htmlFor="password"
                     className="mb-3 flex block text-sm font-medium text-gray-700"
                   >
                     Password
                   </label>
                   <input
                     type="password"
-                    name="first-name"
+                    name="password"
                     value={password}
                     onChange={(e) => {
                      /* @ts-ignore */
                       set_password(e.currentTarget.value);
                     }}
-                    id="first-name"
-                    autoComplete="given-name"
+                    id="password"
+                    autoComplete="password"
                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
 
                 <div className="col-span-3">
                   <label
-                    htmlFor="first-name"
+                    htmlFor="confirm-password"
                     className="mb-3 flex block text-sm font-medium text-gray-700"
                   >
                     Confirm Password
                   </label>
                   <input
                     type="password"
-                    name="first-name"
+                    name="confirm-password"
                     value={password_confirm}
                     onChange={(e) => {
                         /* @ts-ignore */
                       set_password_confirm(e.currentTarget.value);
                     }}
-                    id="first-name"
-                    autoComplete="given-name"
+                    id="confirm-password"
+                    autoComplete="confirm-password"
                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
