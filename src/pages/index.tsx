@@ -28,7 +28,7 @@ export default function Home() {
         })
 
       toast.update(id, {
-        render: "Success", type: "success", isLoading: false, position: "top-right",
+        render: "Success, Redirecting", type: "success", isLoading: false, position: "top-right",
         autoClose: 10000,
         hideProgressBar: false,
         closeOnClick: true,
